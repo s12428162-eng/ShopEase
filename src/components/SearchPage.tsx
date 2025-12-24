@@ -3,6 +3,8 @@ import ProductCard from "../components/ProductCard";
 import productsData from "../data/products";
 import type { Product } from "../data/products";
 import "./Style.css";
+ import { TextField, InputAdornment } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 function SearchPage() {
   const [query, setQuery] = useState<string>("");
@@ -15,13 +17,6 @@ function SearchPage() {
     <div className="search-page">
       <h2 className="search-title">Search our site</h2>
 
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="search-box"
-      />
 
       <div className="search-layout">
         {/* LEFT SIDE RESULTS */}
@@ -48,3 +43,4 @@ function SearchPage() {
 }
 
 export default SearchPage;
+
